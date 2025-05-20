@@ -13,4 +13,5 @@ def home():
 if __name__ == "__main__":
     server = Server(app.wsgi_app)
     server.watch('templates/*.html')  # Watch all HTML templates
+    server.watch('app.py')  # Auto-restart when Python code changes
     server.serve(debug=True, port=5500)  # Or 5000 if you prefer
